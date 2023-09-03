@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CalculadoraAbonoFerias {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar a entrada do usuário para o salário e a quantidade de dias de férias
+        double salario = scanner.nextDouble();
+        int diasFerias = scanner.nextInt();
+
+        // Calcular o abono de férias
+        double abonoFerias = salario * (diasFerias / 30) * 0.33;
+
+        // Apresentar o resultado
+        System.out.println("Abono de férias: R$" + String.format("%.2f", abonoFerias));
+
+        scanner.close();
+    }
+}
